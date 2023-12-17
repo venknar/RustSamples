@@ -6,6 +6,11 @@ struct Person {
 
 struct Point2D(u32, u32);
 
+struct Foo {
+    x: (u32, u32),
+    y: u32,
+}
+
 fn main() {
     let person = Person {
         name:String::from("Adam"),
@@ -20,4 +25,8 @@ fn main() {
     println!("Hello, world!");
 
     println!("Point origin is {}", origin.0);
+
+    let foo = Foo { x: (2,3), y: 3};
+    println!("Foo.X is - {}{}", foo.x.0, foo.x.1);
+    println!("Foo.Y is - {}", foo.y);
 }
